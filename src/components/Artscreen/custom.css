@@ -35,7 +35,7 @@
 }
 
 body {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
   }
   
   .navbar {
@@ -97,15 +97,126 @@ body {
 .homeNavbar{
     display: block !important;
 }
+/* .carCont button::before{
+    content: "\f104";
+} */
   @media (min-width: 768px){
   .navbar-expand-md .navbar-collapse {
       display: flex!important;
       flex-basis: auto;
       justify-content: space-between;
   }
-  .w-98 {
-    width: 100% !important;
-}
+
   }
+
+
+  @media (max-width: 768px){
+    .navbar-expand-md .navbar-collapse {
+        display: flex!important;
+        flex-basis: auto;
+        justify-content: space-between;
+    }
+    .navbar-dark .navbar-toggler{
+        display: none;
+    }
+    .d-n-m{
+        display: none !important;
+    }
+    .d-b-m{
+        display: block !important;
+    }
+    .mlr-20 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .searchForm{
+        margin-bottom: 15px;
+    }
+    .navbar-expand-md .navbar-collapse.topHead{
+        display: block !important;
+    }
+    .pr-n-m{
+        padding-right: 0px !important;
+    }
+    .pl-30-m{
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .ml-15-m{
+        margin-left: 15px;
+    }
+    .navbar-brand{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    .fs-20.defaultColor.pb-2.mt-4{
+        margin-top: 40px !important;
+    }
+    .w-98 {
+        width: 100% !important;
+    }
+    .createStory {
+        width: 100%;
+        padding-top: 40px !important;
+    }
+    .createStory p{
+        margin-bottom: 30px;
+    }
+    .iconCont {
+        padding: 9px 4px;
+        width: 15%;
+    }
+    .iconCont .fs-40.grayColor{
+        font-size: 30px;
+    }
+    .welcomeHead {
+        font-size: 18px;
+    }
+    .fs-15 {
+        font-size: 13px;
+    }
+    .pt-5, .py-5 {
+        padding-top: 2rem!important;
+    }
+    .storyCont h5{
+        margin-top: 12px !important;
+        font-size: 15px;
+    }
+    .storyCont p{
+        font-size: 12px;
+    }
+    .createStory .col-sm-3.pl-5.pr-5{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    #sliderIndicators {
+        min-height: 240px;
+    }
+    .w-30-m{
+        width: 32% !important;
+    }
+    #welcomeModal  {
+        width: 96%;
+    }
+    .shareIcons{
+        padding-left: 10px;
+    }
+
+    .editMenu {
+        min-height: 60vh;
+    }
+    #root{
+        overflow-x: hidden;
+    }
+    .plr-15-m{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .row.w-98{
+        margin-left: 0;
+    }
+
+    }
 
   

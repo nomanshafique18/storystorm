@@ -11,7 +11,7 @@ import {Link} from "react-router-dom"
 export default function Profile() {
   return(
   <>
-    <nav class="navbar mb-0 navbar-expand-md navbar-dark bb-1" aria-label="Fourth navbar example">
+    <nav class="navbar mb-0 navbar-expand-md navbar-dark bb-1 plr-15-m" aria-label="Fourth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./images/logo.png" height="50"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@ export default function Profile() {
       </div>
     </nav>
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-md-3 col-sm-4 pr-n-m">
         <div class="d-flex flex-column flex-shrink-0 bg-light editMenu">
         <ul class="nav nav-pills nav-flush flex-column mb-auto pl-2">
           
@@ -43,27 +43,27 @@ export default function Profile() {
             </a>
           </li>
           <li class="nav-item bb-1 pt-2">
-            <a href="#" class="nav-link d-flex align-item-baseline pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="#" class="nav-link d-flex align-item-center pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
               <BiFileBlank class="defaultColor fs-15" />
               <p class="defaultColor mb-0 ml-2">Drafts</p>
             </a>
           </li>
           <li class="nav-item bb-1 pt-2">
-            <a href="#" class="nav-link d-flex align-item-baseline pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="#" class="nav-link d-flex align-item-center pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
               <BiGlobe class="defaultColor fs-20" />
               <p class="defaultColor mb-0 ml-2">Community <br/><br/> Discover other users made content</p>
             </a>
           </li>
 
           <li class="nav-item pt-2">
-            <a href="#" class="nav-link d-flex align-item-baseline pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="#" class="nav-link d-flex align-item-center pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
               <FaRegCommentDots class="defaultColor fs-15" />
               <p class="defaultColor mb-0 ml-2">Collaborate</p>
             </a>
           </li>
 
           <li class="nav-item pt-2">
-            <a href="#" class="nav-link d-flex align-item-baseline pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="#" class="nav-link d-flex align-items-center pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
               <IoIosListBox class="defaultColor fs-15" />
               <p class="defaultColor mb-0 ml-2">Storyboard</p>
             </a>
@@ -76,7 +76,7 @@ export default function Profile() {
 
       </div>
       </div>
-      <div class="col-sm-10 pl-5 mt-5">
+      <div class="col-md-9 col-sm-8 pl-5 mt-5 pl-30-m">
         <h2 className=" target fs-20 defaultColor pb-3">Create Your Story</h2>
           <div className="createStory pb-3 pl-5 pr-5">
             <div class="row">
@@ -113,7 +113,7 @@ export default function Profile() {
 
           <h2 class="fs-20 defaultColor pb-2 mt-4">Recent</h2>
             <div class="row w-98">
-              <div class="col-sm-4 mb-3">
+              <div class="col-sm-4 mb-4 pr-n-m">
                 <div class="card recentPost">
                     <div class="postImgCont pl-3 pr-3 pt-3 pb-3">
                       <img src="./images/dummy.png" class="rounded img-thumbnail w-50 img-fluid " />
@@ -124,7 +124,7 @@ export default function Profile() {
                     </div>
                 </div>
               </div>
-              <div class="col-sm-4 mb-3">
+              <div class="col-sm-4 mb-4 pr-n-m">
                 <div class="card recentPost">
                     <div class="postImgCont pl-3 pr-3 pt-3 pb-3">
                       <img src="./images/dummy.png" class="rounded img-thumbnail w-50 img-fluid " />
@@ -135,7 +135,7 @@ export default function Profile() {
                     </div>
                 </div>
               </div>
-              <div class="col-sm-4 mb-3">
+              <div class="col-sm-4 mb-4 pr-n-m">
                 <div class="card recentPost">
                     <div class="postImgCont pl-3 pr-3 pt-3 pb-3">
                       <img src="./images/dummy.png" class="rounded img-thumbnail w-50 img-fluid " />
@@ -153,9 +153,9 @@ export default function Profile() {
     </div>
   
     <div class="target modal" id="welcomeModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
-          <div class="modal-body text-center  pt-5 pb-4">
+          <div class="modal-body text-center pl-3 pr-3 pt-5 pb-5">
             <div id="sliderIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators mb-4">
                 <li data-target="#sliderIndicators" data-slide-to="0" class="active"></li>
@@ -226,7 +226,7 @@ export default function Profile() {
                   <h2 class=" defaultColor text-center welcomeHead">Start Creating</h2>
                   <p class="grayColor text-center fs-15 mb-4">Choose template to get started</p>
                   <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 w-30-m">
                         <a href="/art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Manga</h5>
@@ -234,14 +234,14 @@ export default function Profile() {
                         </a>
                     </div>
                     
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 w-30-m">
                         <a href="/art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Webtoon</h5>
                           <p>800 in x 1280 in</p>
                         </a>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 w-30-m">
                         <a href="/art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Comic</h5>

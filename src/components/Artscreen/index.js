@@ -5,45 +5,23 @@ import {FaShare, FaCommentDots} from "react-icons/fa"
 
 
 export default function Artscreen() {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-  
+const [activeSlideIndex,setActiveSlideIndex]=useState(0)
   return(
     
   <>
     <nav class="navbar mb-0 navbar-expand-md navbar-dark homeNavbar" aria-label="Fourth navbar example">
       <div class="container-fluid bb-1">
         <div class="row w-100">
-          <div class="col-sm-12 d-flex pb-2">
+          <div class="col-sm-12 d-flex pb-2 d-b-m pr-n-m ml-15-m">
             <a class="navbar-brand" href="#"><img src="./images/logo.png" height="50"/></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse w-100" id="navbarsCollapse">
-              <ul class="navbar-nav  mb-2 mb-md-0">
+            <div class="collapse navbar-collapse w-100 topHead" id="navbarsCollapse">
+              <ul class="navbar-nav  mb-2 mb-md-0 d-n-m">
                 <li class="nav-item dropdown">
                   <a class="nav-link mr-20  dropdown-toggle btn btn-default" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">File</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="btn btn-default" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Import</a>
@@ -51,7 +29,7 @@ export default function Artscreen() {
                 
               </ul>
               <form>
-                <div class="input-group">
+                <div class="input-group searchForm">
                   <span class="input-group-text fa fa-search pt-2 bg-white br-0" id="basic-addon1">
                   <BsSearch/></span>
                   <input type="text" class="form-control bl-0 pl-0 ml--2" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1"/>
@@ -84,13 +62,23 @@ export default function Artscreen() {
           </div>
           <div class="container-fluid">
             <div class="row w-100">
-              <div class="col-sm-12">
+              <div class="col-sm-12 pr-n-m">
                 <div class="d-flex justify-content-between align-items-center pt-2">
-                    <div class="leftCont">
+                    <div class="leftCont shareIcons">
                       <img src="./images/share-iconl.png" height="22"  />
                       <img src="./images/share-icon.png" height="22"  />
                     </div>
-                    <div class="leftCont">
+                    <div class="carCont">
+                        <div class="d-flex justify-content-center align-items-center">
+                        <input
+                              type="range"
+                              min="1"
+                            />
+                            <img src="./images/align.png" class="w-25 ml-3"/>
+                        
+                          
+                        </div>
+                        
                     
                     </div>
                     <div class="leftCont">
