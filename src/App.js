@@ -21,12 +21,10 @@ export default function App() {
     <Switch>
     <Route path="/" exact component={Profile}/>
 
-    {/* <Route path="/" exact component={Main}/> */}
    
     <Route path="/editor1" exact component={Text}/>
     
     <Route path="/editor" exact component={Edit}/>
-    {/* <Route path="/movable" exact component={Movable}/> */}
     <Route path="/art" exact component={Artscreen}/>
 
 
