@@ -13,21 +13,21 @@
 .p {
   border: #23b1ae !important;
 }
-body {
+/* body {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  width: 1200px !important; /* or whatever width you want. */
+  width: 1200px !important;
   max-width: 1200px !important;
   height: 1700 !important;
   max-height: 1700px !important;
 }
 .body-con {
-  width: 1050px !important; /* or whatever width you want. */
+   width: 1050px !important;
   max-width: 1050px !important;
   overflow: scroll;
   height: 600px !important;
-  max-height: 600px !important;
-}
+  max-height: 600px !important; 
+} */
 .con {
   width: 750px !important; /* or whatever width you want. */
   max-width: 700px !important;
@@ -115,3 +115,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Tangerine', cursive;
 font-family: 'Zen Tokyo Zoo', cursive;*/
+
+.element.col-md-12.navbar.navbar-expand-lg.navbar-light.bg-light{
+  display: none;
+}

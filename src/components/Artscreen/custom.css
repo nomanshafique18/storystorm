@@ -73,7 +73,7 @@ body {
 
 .navbar {
     background: #ffffff;
-    box-shadow:0px 0px 0px 0px #d5d6d7;
+    box-shadow: 0px 5px 15px -2px #d5d6d7;
 }
 .editMenu{
     box-shadow:0px 0px 14px 2px #d5d6d7;
@@ -91,10 +91,21 @@ body {
 .leftIcon{
     direction: rtl;
 }
+.ml-20{
+    margin-left: 20px;
+}
+.homeNavbar{
+    display: block !important;
+}
   @media (min-width: 768px){
   .navbar-expand-md .navbar-collapse {
       display: flex!important;
       flex-basis: auto;
       justify-content: space-between;
   }
+  .w-98 {
+    width: 100% !important;
+}
   }
+
+  

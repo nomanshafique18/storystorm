@@ -113,7 +113,7 @@ export default function Profile() {
 
           <h2 class="fs-20 defaultColor pb-2 mt-4">Recent</h2>
             <div class="row w-98">
-              <div class="col-sm-4">
+              <div class="col-sm-4 mb-3">
                 <div class="card recentPost">
                     <div class="postImgCont pl-3 pr-3 pt-3 pb-3">
                       <img src="./images/dummy.png" class="rounded img-thumbnail w-50 img-fluid " />
@@ -124,7 +124,7 @@ export default function Profile() {
                     </div>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 mb-3">
                 <div class="card recentPost">
                     <div class="postImgCont pl-3 pr-3 pt-3 pb-3">
                       <img src="./images/dummy.png" class="rounded img-thumbnail w-50 img-fluid " />
@@ -135,7 +135,7 @@ export default function Profile() {
                     </div>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 mb-3">
                 <div class="card recentPost">
                     <div class="postImgCont pl-3 pr-3 pt-3 pb-3">
                       <img src="./images/dummy.png" class="rounded img-thumbnail w-50 img-fluid " />

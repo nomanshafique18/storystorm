@@ -15,7 +15,7 @@ export default function Footer() {
 
 		</div>
 		<p className="footer-text">
-		©2021 All Rights Reserved. Ass@no-2
+		©2021 storystorm. All rights reserved.
 		</p>
 		</>
 		)
