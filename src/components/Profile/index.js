@@ -235,11 +235,11 @@ export default function Profile() {
                     </div>
                     
                     <div class="col-sm-4">
-                        <Link to="/art" class="text-center storyCont">
+                        <a href="/art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Webtoon</h5>
                           <p>800 in x 1280 in</p>
-                        </Link>
+                        </a>
                     </div>
                     <div class="col-sm-4">
                         <a href="/art" class="text-center storyCont">
