@@ -2,7 +2,7 @@ import React from 'react'
 
 import Footer from "./components/Footer/Footer.js"
 
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { HashRouter as Router, Route, Switch} from 'react-router-dom'
 import Navbar from "./components/Navbar/Navbar.js"
 // import Main from "./components/Main"
 import Text from "./components/Text"
