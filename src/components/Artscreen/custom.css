@@ -122,7 +122,7 @@ body {
     .d-n-m{
         display: none !important;
     }
-    .d-b-m{
+    #navbarsCollapse, .d-b-m{
         display: block !important;
     }
     .mlr-20 {
@@ -196,9 +196,7 @@ body {
     .w-30-m{
         width: 32% !important;
     }
-    #welcomeModal  {
-        width: 96%;
-    }
+    
     .shareIcons{
         padding-left: 10px;
     }
