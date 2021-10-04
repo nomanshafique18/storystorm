@@ -9,6 +9,7 @@ const [activeSlideIndex,setActiveSlideIndex]=useState(0)
   return(
     
   <>
+
     <nav class="navbar mb-0 navbar-expand-md navbar-dark homeNavbar" aria-label="Fourth navbar example">
       <div class="container-fluid bb-1">
         <div class="row w-100">

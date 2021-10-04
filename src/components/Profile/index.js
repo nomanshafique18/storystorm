@@ -227,11 +227,13 @@ export default function Profile() {
                   <p class="grayColor text-center fs-15 mb-4">Choose template to get started</p>
                   <div class="row">
                     <div class="col-sm-4 w-30-m">
+                      {/* <Link to="/art"   class="text-center storyCont"> */}
                         <a href="/art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Manga</h5>
                           <p>5 in x 7.5 in</p>
                         </a>
+                        {/* </Link> */}
                     </div>
                     
                     <div class="col-sm-4 w-30-m">
