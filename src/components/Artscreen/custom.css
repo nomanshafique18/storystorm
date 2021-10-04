@@ -117,7 +117,7 @@ body {
         justify-content: space-between;
     }
     .navbar-dark .navbar-toggler{
-        display: none;
+        display: none !important;
     }
     .d-n-m{
         display: none !important;
