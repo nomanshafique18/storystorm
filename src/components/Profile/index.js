@@ -226,9 +226,8 @@ export default function Profile() {
                   <h2 class=" defaultColor text-center welcomeHead">Start Creating</h2>
                   <p class="grayColor text-center fs-15 mb-4">Choose template to get started</p>
                   <div class="row">
-                    <div class="col-sm-4 w-30-m">
-                      {/* <Link to="/art"   class="text-center storyCont"> */}
-                        <a href="/art" class="text-center storyCont">
+                    <div class="col-sm-4  w-30-m">
+                        <a href="https://6157566c4667ae17139329e2--storystorm.netlify.app/art#/art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Manga</h5>
                           <p>5 in x 7.5 in</p>
