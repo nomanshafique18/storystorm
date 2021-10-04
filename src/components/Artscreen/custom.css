@@ -112,7 +112,7 @@ body {
 
   @media (max-width: 768px){
     .navbar-expand-md .navbar-collapse {
-        display: flex!important;
+        /* display: flex!important; */
         flex-basis: auto;
         justify-content: space-between;
     }
@@ -122,7 +122,7 @@ body {
     .d-n-m{
         display: none !important;
     }
-    .navbar-expand-md .navbar-collapse#navbarsCollapse, .d-b-m{
+    .navbar-expand-md .navbar-collapse#navbarsCollapse, .d-b-m, .collapse:not(.show){
         display: block !important;
     }
     .mlr-20 {
