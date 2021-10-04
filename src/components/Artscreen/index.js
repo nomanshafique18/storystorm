@@ -19,7 +19,7 @@ const [activeSlideIndex,setActiveSlideIndex]=useState(0)
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse w-100 topHead" id="navbarsCollapse">
+            <div class="collapse1 navbar-collapse w-100 topHead" id="navbarsCollapse">
               <ul class="navbar-nav  mb-2 mb-md-0 d-n-m">
                 <li class="nav-item dropdown">
                   <a class="nav-link mr-20  dropdown-toggle btn btn-default" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">File</a>
