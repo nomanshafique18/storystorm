@@ -3,18 +3,67 @@ import "./custom.css"
 import {BsSearch} from "react-icons/bs"
 import {FaShare, FaCommentDots} from "react-icons/fa"
 import useImage from "use-image"
-import {Stage, Layer, Image} from "react-konva"
-import Text from "react-editable-text"
+import { Stage, Layer, Star, Text,Image } from "react-konva"
+// import Text from "react-editable-text"
 import { Resizable } from "re-resizable";
 import Draggable from "react-draggable";
+import ColorPicker from 'material-ui-color-picker'
+import {FormControl, FormLabel, Slider} from "@material-ui/core";
+import { Paper } from "@material-ui/core";
+import { useNode } from "@craftjs/core";
+import { pt } from 'date-fns/locale'
 // import { useNode } from "@craftjs/core";
 
+function generateShapes() {
+  return [...Array(10)].map((_, i) => ({
+    id: i.toString(),
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    rotation: Math.random() * 180,
+    isDragging: false,
+  }));
+}
+
+const INITIAL_STATE = generateShapes();
+
 export default function Artscreen() {
+
+  
+  const dragUrl = React.useRef();
+  const stageRef = React.useRef();
+  const [images, setImages] = React.useState([]);
+const PicArray =[0,1,2,3,4,5,6,7,8,9,12]
+
+  const imageUrl2 = "https://source.unsplash.com/random";
+  const imageUrl3 = "https://source.unsplash.com/random";
+  const [stars, setStars] = React.useState(INITIAL_STATE);
+
+  const handleDragStart = (e) => {
+    const id = e.target.id();
+    setStars(
+      stars.map((star) => {
+        return {
+          ...star,
+          isDragging: star.id === id,
+        };
+      })
+    );
+  };
+  const handleDragEnd = (e) => {
+    setStars(
+      stars.map((star) => {
+        return {
+          ...star,
+          isDragging: false,
+        };
+      })
+    );
+  };
 
   const URLImage = ({ image }) => {
     const [img] = useImage(image.src);
     return (
-     <Draggable>
+    //  <Draggable>
       <Image
         image={img}
         x={image.x}
@@ -23,13 +72,11 @@ export default function Artscreen() {
         offsetX={img ? img.width / 2 : 0}
         offsetY={img ? img.height / 2 : 0}
       />
-      </Draggable>
+      // </Draggable>
     );
   };
-  const dragUrl = React.useRef();
-  const stageRef = React.useRef();
-  const [images, setImages] = React.useState([]);
-
+  
+  const [background,setBackground] = useState('#fff');
   // const [activeSlideIndex,setActiveSlideIndex]=useState(0)
 
   // const [persistColor,setPersistColor]=React.useState()
@@ -205,52 +252,61 @@ export default function Artscreen() {
             <div class="row">
               <div class="col-sm-12 pl-5 pr-5">
               <div>
+              <ColorPicker
+  name='color'
+  defaultValue={background}
+  value={background} 
+  onChange={color => setBackground(color)}
+ 
+/>
+<br />
+
       Try to drag and image into the stage:
       <br />
-      <img
-        alt="lion"
-        src="https://konvajs.org/assets/lion.png"
-        draggable="true"
-        onDragStart={(e) => {
-          dragUrl.current = e.target.src;
-        }}
-      />
+     {
+       PicArray.map(()=>{
+
+       return <Draggable>
+        <Resizable
+          defaultSize={{
+            width: 100,
+            height: 160,
+          }}
+          style={{
+            position: "absolute",
+            // top: "60px",
+            // left: "70px",
+            // margin: "45px",
+            background: `url(${imageUrl3})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+          }}
+          lockAspectRatio={true}
+        ></Resizable>
+      </Draggable>
+       })
+     
+}
+
+ 
       </div>
               </div>
           </div>
       </div>
-      <div
-        onDrop={(e) => {
-          e.preventDefault();
-          // register event position
-          stageRef.current.setPointersPositions(e);
-          // add image
-          setImages(
-            images.concat([
-              {
-                ...stageRef.current.getPointerPosition(),
-                src: dragUrl.current,
-              },
-            ])
-          );
-        }}
-        onDragOver={(e) => e.preventDefault()}
-      >
-        <Stage
-          width={window.innerWidth}
-          height={window.innerHeight}
-          style={{ border: "1px solid grey",backgroundColor:'red' }}
-          ref={stageRef}
-        >
-          <Layer>
-            {images.map((image,index) => {
-              console.log(index,"image",image)
-              return   <URLImage image={image}  />;
-            })}
-          </Layer>
-        </Stage>
+     
+     
+      <div className="drawingArea ml-5" style={{backgroundColor:background}} >
+            <div style={{ border: '1px solid #eee'}}>
+              <div class="col-sm-12 pl-5 pr-5">
+              <div>
+              <p>abcd</p>
+<br/>
+          
       </div>
-   
+              </div>
+          </div>
+      </div>
+     
     </div>
    
     </>
