@@ -7,7 +7,7 @@ import {Stage, Layer, Image} from "react-konva"
 import Text from "react-editable-text"
 import { Resizable } from "re-resizable";
 import Draggable from "react-draggable";
-import { useNode } from "@craftjs/core";
+// import { useNode } from "@craftjs/core";
 
 export default function Artscreen() {
 
