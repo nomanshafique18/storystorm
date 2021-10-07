@@ -130,7 +130,7 @@ body{
     width: 98%;
     border-radius: 15px;
     box-shadow: 6px 3px 12px 2px #d5d6d7;
-    padding-top: 80px !important;
+    padding-top: 60px !important;
 }
 
 .storyCont{
@@ -139,6 +139,12 @@ body{
 .storyCont:hover{
     text-decoration: none;
     color: #c7c7c9;
+}
+.storyCont h5{
+    font-size: 18px;
+}
+.storyCont p{
+    font-size: 13px;
 }
 .customSizeIcon{
     font-size: 94px;
@@ -152,10 +158,12 @@ body{
 }
 .recentPost h5{
     color: #090f51;
+    font-size: 18px;
 }
 .recentPost p{
     color: #c7c7c9;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 .postImgCont{
     background-color: #eaf0f4;
@@ -165,13 +173,13 @@ body{
 .postImgCont img{
     margin: 0 auto;
     display: block;
-    min-height: 20vh;
+    min-height: 18vh;
 }
 .grayColor{
     color: #c7c7c9;
 }
 .welcomeHead{
-    font-size: 30px;
+    font-size: 50px;
     font-family: fantasy;
     
 }
@@ -217,8 +225,8 @@ body{
     border-radius: 50%;
     background-color: #eaf0f4;
     box-shadow: 8px 3px 10px -1px #d5d6d7;
-    padding: 12px 2px;
-    width: 14%;
+    padding: 20px 2px;
+    width: 11%;
 }
 .w-98{
     width: 98%;
@@ -236,6 +244,9 @@ body{
 }
 .w-96{
     width: 96%;
+}
+.editMenu p.defaultColor{
+    line-height: 15px;
 }
   @media (min-width: 768px){
   .navbar-expand-md .navbar-collapse {

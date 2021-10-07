@@ -97,6 +97,22 @@ body {
 .homeNavbar{
     display: block !important;
 }
+.w-16{
+    width: 16%;
+}
+.w-7{
+    width: 7%;
+}
+
+.w-28{
+    width: 32%;
+}
+.drawingArea{
+    background: white;
+    width: 98%;
+    border-radius: 15px;
+    box-shadow: 6px 3px 12px 2px #d5d6d7;
+}
 /* .carCont button::before{
     content: "\f104";
 } */
@@ -171,7 +187,7 @@ body {
         font-size: 30px !important;
     }
     .welcomeHead {
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
     .fs-15 {
         font-size: 13px !important;
@@ -213,6 +229,9 @@ body {
     }
     .row.w-98{
         margin-left: 0 !important;
+    }
+    .form-control.w-65 {
+        width: 85%;
     }
 
 

@@ -38,7 +38,7 @@ export default function Profile() {
         <ul class="nav nav-pills nav-flush flex-column mb-auto pl-2">
           
           <li class="nav-item pt-4">
-            <a href="#" class="nav-link active" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="#" class="nav-link active w-75" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
               Home
             </a>
           </li>
@@ -50,7 +50,7 @@ export default function Profile() {
           </li>
           <li class="nav-item bb-1 pt-2">
             <a href="#" class="nav-link d-flex align-item-center pt-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
-              <BiGlobe class="defaultColor fs-20" />
+              <BiGlobe class="defaultColor fs-15" />
               <p class="defaultColor mb-0 ml-2">Community <br/><br/> Discover other users made content</p>
             </a>
           </li>
@@ -153,7 +153,7 @@ export default function Profile() {
     </div>
   
     <div class="target modal" id="welcomeModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body text-center pl-3 pr-3 pt-5 pb-5">
             <div id="sliderIndicators" data-interval="false" class="carousel slide" data-ride="carousel">

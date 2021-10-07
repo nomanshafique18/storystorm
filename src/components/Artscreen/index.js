@@ -2,14 +2,46 @@ import React, { useState } from 'react'
 import "./custom.css"
 import {BsSearch} from "react-icons/bs"
 import {FaShare, FaCommentDots} from "react-icons/fa"
-
+import useImage from "use-image"
+import {Stage, Layer, Image} from "react-konva"
+import Text from "react-editable-text"
+import { Resizable } from "re-resizable";
+import Draggable from "react-draggable";
+import { useNode } from "@craftjs/core";
 
 export default function Artscreen() {
-const [activeSlideIndex,setActiveSlideIndex]=useState(0)
-  return(
-    
-  <>
 
+  const URLImage = ({ image }) => {
+    const [img] = useImage(image.src);
+    return (
+     <Draggable>
+      <Image
+        image={img}
+        x={image.x}
+        y={image.y}
+        // I will use offset to set origin to the center of the image
+        offsetX={img ? img.width / 2 : 0}
+        offsetY={img ? img.height / 2 : 0}
+      />
+      </Draggable>
+    );
+  };
+  const dragUrl = React.useRef();
+  const stageRef = React.useRef();
+  const [images, setImages] = React.useState([]);
+
+  // const [activeSlideIndex,setActiveSlideIndex]=useState(0)
+
+  // const [persistColor,setPersistColor]=React.useState()
+  // const { background, padding, actions: {setProp} } = useNode(node => ({
+  //   background: node.data.props.background,
+  //   padding: node.data.props.padding
+  // }));
+  // let texts = { id: "unique-1" };
+  // const textRef = React.useRef();
+
+  return(
+  <>
     <nav class="navbar mb-0 navbar-expand-md navbar-dark homeNavbar" aria-label="Fourth navbar example">
       <div class="container-fluid bb-1">
         <div class="row w-100">
@@ -65,20 +97,33 @@ const [activeSlideIndex,setActiveSlideIndex]=useState(0)
             <div class="row w-100">
               <div class="col-sm-12 pr-n-m">
                 <div class="d-flex justify-content-between align-items-center pt-2">
-                    <div class="leftCont shareIcons">
+                    <div class="leftCont shareIcons w-65">
                       <img src="./images/share-iconl.png" height="22"  />
                       <img src="./images/share-icon.png" height="22"  />
                     </div>
-                    <div class="carCont">
-                        <div class="d-flex justify-content-center align-items-center">
-                        <input
+                    <div class="carCont d-flex justify-content-center align-items-center w-80">
+                        
+                        
+                          <div class="w-28 d-flex align-items-center">
+                            <input
                               type="range"
                               min="1"
+                              class="mr-2"
                             />
-                            <img src="./images/align.png" class="w-25 ml-3"/>
+                              <img src="./images/img-bw.jpg" class="rounded w-16 ml-2"/>
+                              <img src="./images/img-wall.jpg" class="rounded w-16 ml-2"/>
+                              <img src="./images/img-bw.jpg" class="rounded w-16 ml-2"/>
+                          </div>
+                          <div class="w-28">
+                              <img src="./images/icons/1.png" class="w-7 ml-2"/>
+                              <img src="./images/icons/2.png" class="w-7 ml-2"/>
+                              <img src="./images/icons/3.png" class="w-7 ml-2"/>
+                              <img src="./images/icons/4.png" class="w-7 ml-2"/>
+                              <img src="./images/icons/5.png" class="w-7 ml-2"/>
+                              <img src="./images/icons/6.png" class="w-7 ml-2"/>
+                          </div>
                         
                           
-                        </div>
                         
                     
                     </div>
@@ -90,8 +135,8 @@ const [activeSlideIndex,setActiveSlideIndex]=useState(0)
           </div>
       </div>
     </nav>
-    <div class="d-flex flex-column flex-shrink-0 bg-light w-4 min-h-100 editMenu">
-      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <div class="d-flex flex-row bg-light  ">
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center editMenu min-h-100" >
         
         <li class="nav-item pt-11">
           <a href="#" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
@@ -156,7 +201,58 @@ const [activeSlideIndex,setActiveSlideIndex]=useState(0)
 
       
       </ul>
+      <div className="drawingArea w-25 ml-5">
+            <div class="row">
+              <div class="col-sm-12 pl-5 pr-5">
+              <div>
+      Try to drag and image into the stage:
+      <br />
+      <img
+        alt="lion"
+        src="https://konvajs.org/assets/lion.png"
+        draggable="true"
+        onDragStart={(e) => {
+          dragUrl.current = e.target.src;
+        }}
+      />
+      </div>
+              </div>
+          </div>
+      </div>
+      <div
+        onDrop={(e) => {
+          e.preventDefault();
+          // register event position
+          stageRef.current.setPointersPositions(e);
+          // add image
+          setImages(
+            images.concat([
+              {
+                ...stageRef.current.getPointerPosition(),
+                src: dragUrl.current,
+              },
+            ])
+          );
+        }}
+        onDragOver={(e) => e.preventDefault()}
+      >
+        <Stage
+          width={window.innerWidth}
+          height={window.innerHeight}
+          style={{ border: "1px solid grey",backgroundColor:'red' }}
+          ref={stageRef}
+        >
+          <Layer>
+            {images.map((image,index) => {
+              console.log(index,"image",image)
+              return   <URLImage image={image}  />;
+            })}
+          </Layer>
+        </Stage>
+      </div>
+   
     </div>
+   
     </>
     )
 }
