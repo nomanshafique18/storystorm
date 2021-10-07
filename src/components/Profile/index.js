@@ -227,7 +227,7 @@ export default function Profile() {
                   <p class="grayColor text-center fs-15 mb-4">Choose template to get started</p>
                   <div class="row">
                     <div class="col-sm-4  w-30-m">
-                        <Link to="/art" class="text-center storyCont">
+                        <Link to="https://storystorm-julzq9d8d-friend-it-solution.vercel.app/#//art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Manga</h5>
                           <p>5 in x 7.5 in</p>
@@ -235,14 +235,14 @@ export default function Profile() {
                     </div>
                     
                     <div class="col-sm-4 w-30-m">
-                        <a href="/art" class="text-center storyCont">
+                        <a href="https://storystorm-julzq9d8d-friend-it-solution.vercel.app/#//art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Webtoon</h5>
                           <p>800 in x 1280 in</p>
                         </a>
                     </div>
                     <div class="col-sm-4 w-30-m">
-                        <a href="/art" class="text-center storyCont">
+                        <a href="https://storystorm-julzq9d8d-friend-it-solution.vercel.app/#//art" class="text-center storyCont">
                           <img src="./images/dummy.png" class="rounded img-fluid" />
                           <h5 class="defaultColor mt-4 mb-1">Comic</h5>
                           <p>6.256 in x 10.25 in</p>
