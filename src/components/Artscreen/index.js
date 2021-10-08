@@ -466,6 +466,9 @@ export default function Artscreen() {
               data-bs-placement="right"
               onClick={() => {
                 setImageState(false);
+                const t=[...textArray]
+                t.pop()
+                setTextArray(t)
               }}
             >
               <img
@@ -544,7 +547,7 @@ export default function Artscreen() {
                             style={
                           
                               {
-                                position:"absolute"
+                                // position:"absolute"
                               }}
                           >
                             
@@ -556,7 +559,7 @@ export default function Artscreen() {
                                
                                 fontSize: "20px",
                                 width: "100%",
-                                position: "absolute",
+                                // position: "absolute",
                                 padding: "0.5rem",
                                
                               }}
