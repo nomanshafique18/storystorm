@@ -32,12 +32,18 @@ export default function Artscreen() {
   const [textArray, setTextArray] = React.useState([]);
 const [clickImg,setClickImage]=React.useState(true)
 const [clickImg2,setClickImage2]=React.useState(true)
+const [clickImg3,setClickImage3]=React.useState(true)
+const [clickImg4,setClickImage4]=React.useState(true)
+const [clickImg5,setClickImage5]=React.useState(true)
+const [clickImg6,setClickImage6]=React.useState(true)
+
+
   const imageUrl2 = "https://source.unsplash.com/random";
   const imageUrl3 = "https://source.unsplash.com/random";
-  const[backgroundvisible,setBackgroundVisible] = useState(false)
+  const[backgroundvisible,setBackgroundVisible] = useState(true)
   const [activeBackground, setActiveBackground] = React.useState(false);
 // const[]
-  const [visibility,setVisibility] = useState(false)
+  const [visibility,setVisibility] = useState(true)
   const [background, setBackground] = useState("");
 
   return (
@@ -148,7 +154,7 @@ const [clickImg2,setClickImage2]=React.useState(true)
                   <img src="./images/share-iconl.png" height="22" />
                   <img src="./images/share-icon.png" height="22" />
                 </div>
-                <div class="carCont d-flex justify-content-center align-items-center w-80">
+                {/* <div class="carCont d-flex justify-content-center align-items-center w-80">
                   <div class="w-28 d-flex align-items-center">
                     <input type="range" min="1" class="mr-2" />
                     <img src="./images/img-bw.jpg" class="rounded w-16 ml-2" />
@@ -167,6 +173,7 @@ const [clickImg2,setClickImage2]=React.useState(true)
                     <img src="./images/6.png" class="w-7 ml-2" />
                   </div>
                 </div>
+                */}
                 <div class="leftCont">
                   <FaCommentDots class="defaultColor fs-30" />
                 </div>
@@ -427,11 +434,41 @@ const [clickImg2,setClickImage2]=React.useState(true)
           {!backgroundvisible && clickImg && 
                 <>      
                     <img style={{width:'200px'}}
-               src="https://source.unsplash.com/random"
-               onClick={()=>{
+              //  src="https://source.unsplash.com/random"
+              src="./images/c1.jpeg" 
+              onClick={()=>{
       
                  setClickImage2(false)
                }}/>
+                     <img style={{width:'200px'}}
+              //  src="https://source.unsplash.com/random"
+              src="./images/c2.jpeg" 
+              onClick={()=>{
+      
+                 setClickImage3(false)
+               }}/>
+                     <img style={{width:'200px'}}
+              //  src="https://source.unsplash.com/random"
+              src="./images/c3.jpeg" 
+              onClick={()=>{
+      
+                 setClickImage4(false)
+               }}/>
+                  <img style={{width:'200px'}}
+              //  src="https://source.unsplash.com/random"
+              src="./images/c4.jpeg" 
+              onClick={()=>{
+      
+                 setClickImage5(false)
+               }}/>
+                  <img style={{width:'200px'}}
+              //  src="https://source.unsplash.com/random"
+              src="./images/c5.jpeg" 
+              onClick={()=>{
+      
+                 setClickImage6(false)
+               }}/>
+              
               
             <a
               aria-current="page"
@@ -538,12 +575,112 @@ const [clickImg2,setClickImage2]=React.useState(true)
                       </button>
                       <img
                         style={{ zIndex: 999,width: "100%", display: "inline-block" }}
-                        src={'https://source.unsplash.com/random'}
+                        src="./images/c1.jpeg" 
+                        // src={'https://source.unsplash.com/random'}
                       />
                     </Resizable>
                   </Draggable>
                 )}
-
+                 {!clickImg3 && (
+                  <Draggable>
+                    <Resizable
+                      defaultSize={{
+                        width: 200,
+                        height: 100,
+                      }}
+                    >
+                      <button
+                        className="btn"
+                        onClick={() => {
+                          setClickImage3(true);
+                        
+                        }}
+                      >
+                        x
+                      </button>
+                      <img
+                        style={{ zIndex: 999,width: "100%", display: "inline-block" }}
+                        src="./images/c2.jpeg" 
+                        // src={'https://source.unsplash.com/random'}
+                      />
+                    </Resizable>
+                  </Draggable>
+                )}
+                 {!clickImg4 && (
+                  <Draggable>
+                    <Resizable
+                      defaultSize={{
+                        width: 200,
+                        height: 100,
+                      }}
+                    >
+                      <button
+                        className="btn"
+                        onClick={() => {
+                          setClickImage4(true);
+                        
+                        }}
+                      >
+                        x
+                      </button>
+                      <img
+                        style={{ zIndex: 999,width: "100%", display: "inline-block" }}
+                        src="./images/c3.jpeg" 
+                        // src={'https://source.unsplash.com/random'}
+                      />
+                    </Resizable>
+                  </Draggable>
+                )}
+                 {!clickImg5 && (
+                  <Draggable>
+                    <Resizable
+                      defaultSize={{
+                        width: 200,
+                        height: 100,
+                      }}
+                    >
+                      <button
+                        className="btn"
+                        onClick={() => {
+                          setClickImage5(true);
+                        
+                        }}
+                      >
+                        x
+                      </button>
+                      <img
+                        style={{ zIndex: 999,width: "100%", display: "inline-block" }}
+                        src="./images/c4.jpeg" 
+                        // src={'https://source.unsplash.com/random'}
+                      />
+                    </Resizable>
+                  </Draggable>
+                )}
+                 {!clickImg6 && (
+                  <Draggable>
+                    <Resizable
+                      defaultSize={{
+                        width: 200,
+                        height: 100,
+                      }}
+                    >
+                      <button
+                        className="btn"
+                        onClick={() => {
+                          setClickImage6(true);
+                        
+                        }}
+                      >
+                        x
+                      </button>
+                      <img
+                        style={{ zIndex: 999,width: "100%", display: "inline-block" }}
+                        src="./images/c5.jpeg" 
+                        // src={'https://source.unsplash.com/random'}
+                      />
+                    </Resizable>
+                  </Draggable>
+                )}
                 {imageState && (
                   <Draggable>
                     <Resizable
