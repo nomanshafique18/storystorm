@@ -47,7 +47,7 @@ export default function Artscreen() {
         <div class="container-fluid bb-1">
           <div class="row w-100">
             <div class="col-sm-12 d-flex pb-2 d-b-m pr-n-m ml-15-m">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" >
                 <img src="./images/logo.png" height="50" />
               </a>
               <button
@@ -70,7 +70,7 @@ export default function Artscreen() {
                   <li class="nav-item dropdown">
                     <a
                       class="nav-link mr-20  dropdown-toggle btn btn-default"
-                      href="#"
+                      
                       id="dropdown04"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -81,7 +81,7 @@ export default function Artscreen() {
                   <li class="nav-item">
                     <a
                       class="btn btn-default"
-                      href="#"
+                      
                       id="dropdown04"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -109,7 +109,7 @@ export default function Artscreen() {
                 </form>
                 <div class="rightNavbar">
                   <div>
-                    <a class="btn btn-primary mr-20" href="#">
+                    <a class="btn btn-primary mr-20" >
                       <i class="fa fa-external-link-alt"></i> Export
                     </a>
                   </div>
@@ -177,7 +177,7 @@ export default function Artscreen() {
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center editMenu min-h-100">
           <li class="nav-item pt-11">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -195,7 +195,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -213,7 +213,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -231,7 +231,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -249,7 +249,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -302,6 +302,9 @@ export default function Artscreen() {
                 height="30"
                 role="img"
                 aria-label="Home"
+                onClick={() => {
+                  setActiveBackground(!activeBackground);
+                }}
               />
             </a>
           </li>
@@ -337,7 +340,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -355,7 +358,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              href="#"
+              
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -464,7 +467,7 @@ export default function Artscreen() {
           className="drawingArea ml-5 mt-4 mr-5"
           style={{ backgroundColor: background, overflow: "hidden" }}
         >
-          <div style={{ border: "1px solid #eee" }}>
+          <div>
             <div class="col-sm-12 pl-5 pr-5">
               <div>
                 <p>
@@ -493,7 +496,6 @@ export default function Artscreen() {
                                
                                 fontSize: "20px",
                                 width: "100%",
-                                borderRight: "0.1px solid #fef",
                                 position: "absolute",
                                 padding: "0.5rem",
                                
@@ -510,7 +512,7 @@ export default function Artscreen() {
                   <Draggable>
                     <Resizable
                       defaultSize={{
-                        width: 120,
+                        width: 200,
                         height: 100,
                       }}
                     >
