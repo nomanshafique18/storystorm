@@ -157,7 +157,7 @@ const [clickImg2,setClickImage2]=React.useState(true)
                       class="rounded w-16 ml-2"
                     />
                     <img src="./images/img-bw.jpg" class="rounded w-16 ml-2" />
-                  </div>
+                  </div> 
                   <div class="w-28 alignmentImgs">
                     <img src="./images/1.png" class="w-7 ml-2" />
                     <img src="./images/2.png" class="w-7 ml-2" />
