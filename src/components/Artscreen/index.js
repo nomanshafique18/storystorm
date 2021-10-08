@@ -15,17 +15,6 @@ import { pt } from "date-fns/locale";
 // import { useNode } from "@craftjs/core";
 import { HexColorPicker } from "react-colorful";
 import ContentEditable from "react-contenteditable";
-function generateShapes() {
-  return [...Array(10)].map((_, i) => ({
-    id: i.toString(),
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-    rotation: Math.random() * 180,
-    isDragging: false,
-  }));
-}
-
-const INITIAL_STATE = generateShapes();
 
 export default function Artscreen() {
   const text = React.useRef("Write");
@@ -39,65 +28,16 @@ export default function Artscreen() {
   };
 
   const [imageState, setImageState] = React.useState();
-  const dragUrl = React.useRef();
-  const stageRef = React.useRef();
-  const [images, setImages] = React.useState([]);
   const PicArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12];
   const [textArray, setTextArray] = React.useState([]);
 
   const imageUrl2 = "https://source.unsplash.com/random";
   const imageUrl3 = "https://source.unsplash.com/random";
-  const [stars, setStars] = React.useState(INITIAL_STATE);
   const [activeBackground, setActiveBackground] = React.useState(false);
-  const handleDragStart = (e) => {
-    const id = e.target.id();
-    setStars(
-      stars.map((star) => {
-        return {
-          ...star,
-          isDragging: star.id === id,
-        };
-      })
-    );
-  };
-  const handleDragEnd = (e) => {
-    setStars(
-      stars.map((star) => {
-        return {
-          ...star,
-          isDragging: false,
-        };
-      })
-    );
-  };
 
-  const URLImage = ({ image }) => {
-    const [img] = useImage(image.src);
-    return (
-      //  <Draggable>
-      <Image
-        image={img}
-        x={image.x}
-        y={image.y}
-        // I will use offset to set origin to the center of the image
-        offsetX={img ? img.width / 2 : 0}
-        offsetY={img ? img.height / 2 : 0}
-      />
-      // </Draggable>
-    );
-  };
 
   const [background, setBackground] = useState("");
-  // const [activeSlideIndex,setActiveSlideIndex]=useState(0)
-
-  // const [persistColor,setPersistColor]=React.useState()
-  // const { background, padding, actions: {setProp} } = useNode(node => ({
-  //   background: node.data.props.background,
-  //   padding: node.data.props.padding
-  // }));
-  // let texts = { id: "unique-1" };
-  // const textRef = React.useRef();
-
+ 
   return (
     <>
       <nav
