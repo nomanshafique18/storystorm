@@ -40,7 +40,7 @@ const [clickImg6,setClickImage6]=React.useState(true)
 
   const imageUrl2 = "https://source.unsplash.com/random";
   const imageUrl3 = "https://source.unsplash.com/random";
-  const[backgroundvisible,setBackgroundVisible] = useState(true)
+  const[backgroundvisible,setBackgroundVisible] = useState(false)
   const [activeBackground, setActiveBackground] = React.useState(false);
 // const[]
   const [visibility,setVisibility] = useState(true)
