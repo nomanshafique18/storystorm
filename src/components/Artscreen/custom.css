@@ -244,4 +244,17 @@ main {
   .form-control.w-65 {
     width: 85%;
   }
+  .alignmentImgs {
+    display: none;
+  }
+  .carCont .w-28.d-flex.align-items-center {
+    width: 90%;
+  }
+  .carCont .rounded.w-16 {
+    width: 9%;
+  }
+  .drawingArea {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
 }

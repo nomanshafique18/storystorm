@@ -156,7 +156,7 @@ export default function Artscreen() {
                     />
                     <img src="./images/img-bw.jpg" class="rounded w-16 ml-2" />
                   </div>
-                  <div class="w-28">
+                  <div class="w-28 alignmentImgs">
                     <img src="./images/icons/1.png" class="w-7 ml-2" />
                     <img src="./images/icons/2.png" class="w-7 ml-2" />
                     <img src="./images/icons/3.png" class="w-7 ml-2" />
