@@ -531,26 +531,32 @@ export default function Artscreen() {
                   {textArray.map((item) => {
                     return (
                       <>
-                        <Draggable>
+                        <Draggable >
+
                           <Resizable
                             defaultSize={{
                               width: 120,
                               height: 100,
                             }}
+                            style={
+                          
+                              {
+                                position:"absolute"
+                              }}
                           >
+                            
                             <ContentEditable
                               html={text.current}
                               onBlur={handleBlur}
                               onChange={handleChange}
                               style={{
+                               
                                 fontSize: "20px",
                                 width: "100%",
                                 borderRight: "0.1px solid #fef",
                                 position: "absolute",
                                 padding: "0.5rem",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
+                               
                               }}
                             />
                           </Resizable>
