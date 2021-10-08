@@ -313,11 +313,9 @@ export default function Artscreen() {
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              
+              data-bs-placement="right"  
             >
-
-              <img
+                <img
                 src="./images/img.png"
                 class="bi"
                 width="30"
