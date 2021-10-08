@@ -35,9 +35,9 @@ export default function Artscreen() {
   const imageUrl3 = "https://source.unsplash.com/random";
   const [activeBackground, setActiveBackground] = React.useState(false);
 
-
+  const [visibility,setVisibility] = useState(false)
   const [background, setBackground] = useState("");
- 
+
   return (
     <>
       <nav
@@ -70,7 +70,7 @@ export default function Artscreen() {
                   <li class="nav-item dropdown">
                     <a
                       class="nav-link mr-20  dropdown-toggle btn btn-default"
-                      
+
                       id="dropdown04"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -81,7 +81,7 @@ export default function Artscreen() {
                   <li class="nav-item">
                     <a
                       class="btn btn-default"
-                      
+
                       id="dropdown04"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -177,7 +177,7 @@ export default function Artscreen() {
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center editMenu min-h-100">
           <li class="nav-item pt-11">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -195,7 +195,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -213,7 +213,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -231,7 +231,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -249,7 +249,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -314,33 +314,26 @@ export default function Artscreen() {
               aria-current="page"
               data-bs-toggle="tooltip"
               data-bs-placement="right"
+              
             >
-              <label class="custom-file-upload">
-                <input
-                  type="file"
-                  className="form-control"
-                  // value={imageState}
-                  onChange={(e) => {
-                    console.log(e?.target?.files[0]);
-                    console.log(URL.createObjectURL(e?.target?.files[0]));
-                    setImageState(e?.target?.files[0]);
-                  }}
-                />
-                <input type="file" />
-                <img
-                  src="./images/img.png"
-                  class="bi"
-                  width="30"
-                  height="30"
-                  role="img"
-                  aria-label="Home"
-                />
-              </label>
+
+              <img
+                src="./images/img.png"
+                class="bi"
+                width="30"
+                height="30"
+                role="img"
+                aria-label="Home"
+                onClick={()=>{
+                  setVisibility(!visibility)
+                }}
+              />
+
             </a>
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -358,7 +351,7 @@ export default function Artscreen() {
           </li>
           <li class="nav-item">
             <a
-              
+
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -406,7 +399,7 @@ export default function Artscreen() {
               data-bs-placement="right"
               onClick={() => {
                 setImageState(false);
-                const t=[...textArray]
+                const t = [...textArray]
                 t.pop()
                 setTextArray(t)
               }}
@@ -422,7 +415,8 @@ export default function Artscreen() {
             </a>
           </li>
         </ul>
-        <div className="drawingArea w-25 ml-5 mt-4 ">
+      { visibility &&
+        <div className="drawingArea w-25 ml-5 mt-4 d-flex justify-content-center">
           <div>
             <div class="col-sm-12">
               {/* <ColorPicker
@@ -431,30 +425,27 @@ export default function Artscreen() {
                 value={background}
                 onChange={(color) => setBackground(color)}
               /> */}
-
-              <p>Try to drag and image into the stage:</p>
-              {PicArray.map(() => {
-                return (
-                  <Draggable>
-                    <Resizable
-                      defaultSize={{
-                        width: 100,
-                        height: 160,
-                      }}
-                      style={{
-                        position: "absolute",
-                        // top: "60px",
-                        // left: "70px",
-                        // margin: "45px",
-                        background: `url(${imageUrl3})`,
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat",
-                      }}
-                      lockAspectRatio={true}
-                    ></Resizable>
-                  </Draggable>
-                );
-              })}
+            <a
+              aria-current="page"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+            >
+              <label class="custom-file-upload">
+                <input
+                  type="file"
+                  className="form-control"
+                  // value={imageState}
+                  onChange={(e) => {
+                    console.log(e?.target?.files[0]);
+                    console.log(URL.createObjectURL(e?.target?.files[0]));
+                    setImageState(e?.target?.files[0]);
+                  }}
+                />
+                Choose Image
+                <input type="file" />
+              </label>
+              </a>
+           
             </div>
             {activeBackground && (
               <HexColorPicker
@@ -465,7 +456,7 @@ export default function Artscreen() {
             )}
           </div>
         </div>
-
+}
         <div
           className="drawingArea ml-5 mt-4 mr-5"
           style={{ backgroundColor: background, overflow: "hidden" }}
@@ -485,23 +476,23 @@ export default function Artscreen() {
                               height: 100,
                             }}
                             style={
-                          
+
                               {
                                 // position:"absolute"
                               }}
                           >
-                            
+
                             <ContentEditable
                               html={text.current}
                               onBlur={handleBlur}
                               onChange={handleChange}
                               style={{
-                               
+
                                 fontSize: "20px",
                                 width: "100%",
                                 // position: "absolute",
                                 padding: "0.5rem",
-                               
+                                zIndex: 99999
                               }}
                             />
                           </Resizable>
@@ -528,7 +519,7 @@ export default function Artscreen() {
                         x
                       </button>
                       <img
-                        style={{ width: "100%", display: "inline-block" }}
+                        style={{ zIndex: 999,width: "100%", display: "inline-block" }}
                         src={URL.createObjectURL(imageState)}
                       />
                     </Resizable>
