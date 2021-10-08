@@ -30,11 +30,13 @@ export default function Artscreen() {
   const [imageState, setImageState] = React.useState();
   const PicArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12];
   const [textArray, setTextArray] = React.useState([]);
-
+const [clickImg,setClickImage]=React.useState(true)
+const [clickImg2,setClickImage2]=React.useState(true)
   const imageUrl2 = "https://source.unsplash.com/random";
   const imageUrl3 = "https://source.unsplash.com/random";
+  const[backgroundvisible,setBackgroundVisible] = useState(false)
   const [activeBackground, setActiveBackground] = React.useState(false);
-
+// const[]
   const [visibility,setVisibility] = useState(false)
   const [background, setBackground] = useState("");
 
@@ -324,6 +326,7 @@ export default function Artscreen() {
                 aria-label="Home"
                 onClick={()=>{
                   setVisibility(!visibility)
+                  setBackgroundVisible(false)
                 }}
               />
 
@@ -384,6 +387,9 @@ export default function Artscreen() {
                   aria-label="Home"
                   onClick={() => {
                     setActiveBackground(!activeBackground);
+                    setVisibility(!visibility)
+                  
+                    setBackgroundVisible(true)
                   }}
                 />
               </label>
@@ -417,12 +423,16 @@ export default function Artscreen() {
         <div className="drawingArea w-25 ml-5 mt-4 d-flex justify-content-center">
           <div>
             <div class="col-sm-12">
-              {/* <ColorPicker
-                name="color"
-                defaultValue={"Choose Color"}
-                value={background}
-                onChange={(color) => setBackground(color)}
-              /> */}
+         
+          {!backgroundvisible && clickImg && 
+                <>      
+                    <img style={{width:'200px'}}
+               src="https://source.unsplash.com/random"
+               onClick={()=>{
+      
+                 setClickImage2(false)
+               }}/>
+              
             <a
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -431,7 +441,7 @@ export default function Artscreen() {
               <label class="custom-file-upload">
                 <input
                   type="file"
-                  className="form-control"
+                  className="btn btn-primary form-control"
                   // value={imageState}
                   onChange={(e) => {
                     console.log(e?.target?.files[0]);
@@ -443,9 +453,10 @@ export default function Artscreen() {
                 <input type="file" />
               </label>
               </a>
-           
+              </>
+}
             </div>
-            {activeBackground && (
+            {backgroundvisible && activeBackground && (
               <HexColorPicker
                 style={{ marginTop: "20rem" }}
                 color={background}
@@ -479,7 +490,16 @@ export default function Artscreen() {
                                 // position:"absolute"
                               }}
                           >
-
+ <button
+                        className="btn"
+                        onClick={() => {
+                          const t = [...textArray]
+                          t.pop()
+                          setTextArray(t)
+                        }}
+                      >
+                        x
+                      </button>
                             <ContentEditable
                               html={text.current}
                               onBlur={handleBlur}
@@ -499,6 +519,30 @@ export default function Artscreen() {
                     );
                   })}
                 </p>
+                {!clickImg2 && (
+                  <Draggable>
+                    <Resizable
+                      defaultSize={{
+                        width: 200,
+                        height: 100,
+                      }}
+                    >
+                      <button
+                        className="btn"
+                        onClick={() => {
+                          setClickImage2(true);
+                        
+                        }}
+                      >
+                        x
+                      </button>
+                      <img
+                        style={{ zIndex: 999,width: "100%", display: "inline-block" }}
+                        src={'https://source.unsplash.com/random'}
+                      />
+                    </Resizable>
+                  </Draggable>
+                )}
 
                 {imageState && (
                   <Draggable>
