@@ -164,7 +164,7 @@ export default function Profile() {
               </ol>
               <div class="carousel-inner" >
                 <div class="carousel-item active">
-                  <h2 class="defaultColor text-center welcomeHead">Welcome to story storystorm.co</h2>
+                  <h2 class="defaultColor text-center welcomeHead">Welcome to storystorm.co</h2>
                   <p class="grayColor text-center fs-15">Tell us who are you</p>
                   <div class="form-group mt-4 mb-4">
                       <input class="form-control w-65 userInput" placeholder="Enter username" />
