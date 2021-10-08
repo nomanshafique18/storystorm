@@ -159,12 +159,12 @@ const [clickImg2,setClickImage2]=React.useState(true)
                     <img src="./images/img-bw.jpg" class="rounded w-16 ml-2" />
                   </div>
                   <div class="w-28 alignmentImgs">
-                    <img src="./images/icons/1.png" class="w-7 ml-2" />
-                    <img src="./images/icons/2.png" class="w-7 ml-2" />
-                    <img src="./images/icons/3.png" class="w-7 ml-2" />
-                    <img src="./images/icons/4.png" class="w-7 ml-2" />
-                    <img src="./images/icons/5.png" class="w-7 ml-2" />
-                    <img src="./images/icons/6.png" class="w-7 ml-2" />
+                    <img src="./images/1.png" class="w-7 ml-2" />
+                    <img src="./images/2.png" class="w-7 ml-2" />
+                    <img src="./images/3.png" class="w-7 ml-2" />
+                    <img src="./images/4.png" class="w-7 ml-2" />
+                    <img src="./images/5.png" class="w-7 ml-2" />
+                    <img src="./images/6.png" class="w-7 ml-2" />
                   </div>
                 </div>
                 <div class="leftCont">
