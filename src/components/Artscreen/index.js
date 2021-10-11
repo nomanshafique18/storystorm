@@ -428,40 +428,40 @@ const [clickImg6,setClickImage6]=React.useState(true)
         </ul>
       { visibility &&
         <div className="drawingArea w-25 ml-5 mt-4 d-flex justify-content-center">
-          <div>
+          
             <div class="col-sm-12">
-         
+         <div class="imagesList">
           {!backgroundvisible && clickImg && 
                 <>      
-                    <img style={{width:'200px'}}
+                    <img class="img-responsive"
               //  src="https://source.unsplash.com/random"
               src="./images/c1.jpeg" 
               onClick={()=>{
       
                  setClickImage2(false)
                }}/>
-                     <img style={{width:'200px'}}
+                     <img class="img-responsive"
               //  src="https://source.unsplash.com/random"
               src="./images/c2.jpeg" 
               onClick={()=>{
       
                  setClickImage3(false)
                }}/>
-                     <img style={{width:'200px'}}
+                     <img class="img-responsive"
               //  src="https://source.unsplash.com/random"
               src="./images/c3.jpeg" 
               onClick={()=>{
       
                  setClickImage4(false)
                }}/>
-                  <img style={{width:'200px'}}
+                  <img class="img-responsive"
               //  src="https://source.unsplash.com/random"
               src="./images/c4.jpeg" 
               onClick={()=>{
       
                  setClickImage5(false)
                }}/>
-                  <img style={{width:'200px'}}
+                  <img class="img-responsive"
               //  src="https://source.unsplash.com/random"
               src="./images/c5.jpeg" 
               onClick={()=>{
@@ -509,7 +509,7 @@ const [clickImg6,setClickImage6]=React.useState(true)
         >
           <div>
             <div class="col-sm-12 pl-5 pr-5">
-              <div>
+              <div class="d-flex flex-wrap">
                 <p>
                   {textArray.map((item) => {
                     return (

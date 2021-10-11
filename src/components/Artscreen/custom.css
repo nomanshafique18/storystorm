@@ -113,6 +113,9 @@ main {
 }
 .react-draggable {
   height: auto !important;
+  width: 230px !important;
+  margin-right: 21px;
+  margin-bottom: 20px;
 }
 .react-draggable button {
   color: #0a1052;
@@ -121,6 +124,17 @@ main {
   padding-right: 8px;
   padding: 0 5px 0px 0;
   font-weight: bold;
+}
+.imagesList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.imagesList img {
+  width: 110px;
+  margin-bottom: 10px;
 }
 /* .carCont button::before{
     content: "\f104";
