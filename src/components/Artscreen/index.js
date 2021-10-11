@@ -377,8 +377,7 @@ const [clickImg6,setClickImage6]=React.useState(true)
           </li>
           <li class="nav-item">
             {/* <label class="custom-file-upload"> */}
-
-            <a
+           <a
               class="nav-link"
               aria-current="page"
               data-bs-toggle="tooltip"
@@ -393,10 +392,11 @@ const [clickImg6,setClickImage6]=React.useState(true)
                   role="img"
                   aria-label="Home"
                   onClick={() => {
+                    // setBackground(true)
+                    setBackgroundVisible(true)
                     setActiveBackground(!activeBackground);
                     setVisibility(!visibility)
                   
-                    setBackgroundVisible(true)
                   }}
                 />
               </label>
@@ -493,7 +493,7 @@ const [clickImg6,setClickImage6]=React.useState(true)
               </>
 }
             </div>
-            {backgroundvisible && activeBackground && (
+            {backgroundvisible && (
               <HexColorPicker
                 style={{ marginTop: "20rem" }}
                 color={background}
