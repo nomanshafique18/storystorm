@@ -173,6 +173,9 @@ export default function Profile() {
                   <div class="form-group">
                     <select class="form-control w-65 userInput">
                       <option value="0">What can best describe what you do?</option>
+                      <option value="1">Creative</option>
+                      <option value="2">Writer</option>
+                      <option value="3">Illustrator</option>
                     </select>
                   </div>
 
