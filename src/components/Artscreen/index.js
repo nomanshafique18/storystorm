@@ -312,8 +312,15 @@ const [clickImg6,setClickImage6]=React.useState(true)
                 role="img"
                 aria-label="Home"
                 onClick={() => {
+                  // setBackground(true)
+                  setBackgroundVisible(true)
                   setActiveBackground(!activeBackground);
+                  setVisibility(!visibility)
+                
                 }}
+                // onClick={() => {
+                //   setActiveBackground(!activeBackground);
+                // }}
               />
             </a>
           </li>
@@ -391,13 +398,13 @@ const [clickImg6,setClickImage6]=React.useState(true)
                   height="30"
                   role="img"
                   aria-label="Home"
-                  onClick={() => {
-                    // setBackground(true)
-                    setBackgroundVisible(true)
-                    setActiveBackground(!activeBackground);
-                    setVisibility(!visibility)
+                  // onClick={() => {
+                  //   // setBackground(true)
+                  //   setBackgroundVisible(true)
+                  //   setActiveBackground(!activeBackground);
+                  //   setVisibility(!visibility)
                   
-                  }}
+                  // }}
                 />
               </label>
             </a>
