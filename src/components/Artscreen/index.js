@@ -433,7 +433,7 @@ const [clickImg6,setClickImage6]=React.useState(true)
             </a>
           </li>
         </ul>
-      { visibility &&
+      {/* { visibility && */}
         <div className="drawingArea w-25 ml-5 mt-4 d-flex justify-content-center">
           
             <div class="col-sm-12">
@@ -509,7 +509,7 @@ const [clickImg6,setClickImage6]=React.useState(true)
             )}
           </div>
         </div>
-}
+{/* } */}
         <div
           className="drawingArea ml-5 mt-4 mr-5"
           style={{ backgroundColor: background, overflow: "hidden" }}
